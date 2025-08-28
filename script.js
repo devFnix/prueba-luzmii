@@ -48,8 +48,8 @@ function loadOutingsList() {
             <p><strong>📅 Fecha:</strong> ${outing.date}</p>
             <p><strong>⏰ Hora:</strong> ${outing.time}</p>
             <p><strong>📍 Lugar:</strong> ${outing.location}</p>
-            <p>${outing.description.substring(0, 100)}...</p>
-            <a href="detail.html?id=${outing.id}">Ver Detalles</a>
+            <p><strong>📝 Descripción:</strong> ${outing.description.substring(0, 100)}...</p>
+            <a href="detail.html?id=${outing.id}">🔍 Ver Detalles</a>
         `;
         outingsListDiv.appendChild(outingCard);
     });
