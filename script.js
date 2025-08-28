@@ -147,11 +147,11 @@ function loadOutingDetail() {
                 </div>
                 <div class="outing-info-large">
                     <h2>🍽️ ${outing.name}</h2>
-            <p><strong>📅 Fecha:</strong> ${outing.date}</p>
-            <p><strong>⏰ Hora:</strong> ${outing.time}</p>
-            <p><strong>📍 Lugar:</strong> ${outing.location}</p>
-            <p><strong>📝 Descripción:</strong> ${outing.description}</p>
-            <p><strong>👥 Asistentes:</strong> ${outing.attendants.join(', ')}</p>
+                    <p><strong>📅 Fecha:</strong> ${outing.date}</p>
+                    <p><strong>⏰ Hora:</strong> ${outing.time}</p>
+                    <p><strong>📍 Lugar:</strong> ${outing.location}</p>
+                    <p><strong>📝 Descripción:</strong> ${outing.description}</p>
+                    <p><strong>👥 Asistentes:</strong> ${outing.attendants.join(', ')}</p>
                     <a href="index.html" class="back-button">Volver a la lista</a>
                 </div>
             </div>
