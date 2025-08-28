@@ -19,7 +19,7 @@ h1 {
 
 main {
     padding: 20px;
-    max-width: 800px;
+    max-width: 1000px;
     margin: 20px auto;
     background-color: #fff;
     border-radius: 8px;
@@ -28,39 +28,249 @@ main {
 
 .outing-card {
     border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 15px;
-    margin-bottom: 15px;
-    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 0;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.outing-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.outing-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.outing-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.outing-card:hover .outing-image img {
+    transform: scale(1.05);
+}
+
+.outing-info {
+    padding: 20px;
 }
 
 .outing-card h2 {
     margin-top: 0;
     color: #007bff;
+    font-size: 1.4em;
 }
 
 .outing-card p {
     line-height: 1.6;
+    margin: 8px 0;
 }
 
 .outing-card a {
     display: inline-block;
     background-color: #007bff;
     color: #fff;
-    padding: 8px 15px;
-    border-radius: 5px;
+    padding: 10px 20px;
+    border-radius: 25px;
     text-decoration: none;
-    margin-top: 10px;
+    margin-top: 15px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
 .outing-card a:hover {
     background-color: #0056b3;
 }
 
-#outing-detail h2 {
-    color: #007bff;
+/* Estilos para la página de detalle */
+.outing-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+    align-items: start;
 }
 
-#outing-detail p {
+.outing-image-large {
+    width: 100%;
+    height: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.outing-image-large img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.outing-info-large h2 {
+    color: #007bff;
+    font-size: 2em;
+    margin-top: 0;
+}
+
+.outing-info-large p {
     line-height: 1.8;
+    margin: 12px 0;
+    font-size: 1.1em;
+}
+
+.back-button {
+    display: inline-block;
+    background-color: #6c757d;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    margin-top: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #5a6268;
+}
+
+/* Estilos para las opciones de lugares */
+.location-options {
+    margin-top: 40px;
+}
+
+.location-options h3 {
+    color: #333;
+    font-size: 1.6em;
+    margin-bottom: 25px;
+    text-align: center;
+    position: relative;
+}
+
+.location-options h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #007bff;
+    border-radius: 2px;
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.location-option {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e9ecef;
+}
+
+.location-option:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.option-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.option-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.location-option:hover .option-image img {
+    transform: scale(1.1);
+}
+
+.option-info {
+    padding: 20px;
+}
+
+.option-info h4 {
+    color: #007bff;
+    margin: 0 0 10px 0;
+    font-size: 1.3em;
+}
+
+.option-description {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.option-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.rating {
+    background-color: #fff3cd;
+    color: #856404;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.price {
+    background-color: #d1ecf1;
+    color: #0c5460;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .outing-header {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .outing-image-large {
+        height: 250px;
+    }
+    
+    .options-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    main {
+        margin: 10px;
+        padding: 15px;
+    }
+    
+    .outing-card {
+        margin-bottom: 15px;
+    }
+    
+    .outing-image {
+        height: 180px;
+    }
 }
