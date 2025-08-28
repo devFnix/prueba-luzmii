@@ -44,10 +44,10 @@ function loadOutingsList() {
         const outingCard = document.createElement('div');
         outingCard.classList.add('outing-card');
         outingCard.innerHTML = `
-            <h2>${outing.name}</h2>
-            <p><strong>Fecha:</strong> ${outing.date}</p>
-            <p><strong>Hora:</strong> ${outing.time}</p>
-            <p><strong>Lugar:</strong> ${outing.location}</p>
+            <h2>🍽️ ${outing.name}</h2>
+            <p><strong>📅 Fecha:</strong> ${outing.date}</p>
+            <p><strong>⏰ Hora:</strong> ${outing.time}</p>
+            <p><strong>📍 Lugar:</strong> ${outing.location}</p>
             <p>${outing.description.substring(0, 100)}...</p>
             <a href="detail.html?id=${outing.id}">Ver Detalles</a>
         `;
@@ -64,13 +64,13 @@ function loadOutingDetail() {
 
     if (outing) {
         outingDetailDiv.innerHTML = `
-            <h2>${outing.name}</h2>
-            <p><strong>Fecha:</strong> ${outing.date}</p>
-            <p><strong>Hora:</strong> ${outing.time}</p>
-            <p><strong>Lugar:</strong> ${outing.location}</p>
-            <p><strong>Descripción:</strong> ${outing.description}</p>
-            <p><strong>Asistentes:</strong> ${outing.attendants.join(', ')}</p>
-            <a href="index.html">Volver a la lista</a>
+            <h2>🍽️ ${outing.name}</h2>
+            <p><strong>📅 Fecha:</strong> ${outing.date}</p>
+            <p><strong>⏰ Hora:</strong> ${outing.time}</p>
+            <p><strong>📍 Lugar:</strong> ${outing.location}</p>
+            <p><strong>📝 Descripción:</strong> ${outing.description}</p>
+            <p><strong>👥 Asistentes:</strong> ${outing.attendants.join(', ')}</p>
+            <a href="index.html">🏠 Volver a la lista</a>
         `;
         
         const mapContainer = document.getElementById('map-container');
