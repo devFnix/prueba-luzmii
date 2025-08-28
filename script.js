@@ -95,6 +95,13 @@ const outings = [
                 description: "Rutas de alta montaña para expertos",
                 rating: 4.8,
                 price: "$$"
+            },
+            {
+                name: "Sierra de Guadarrama2",
+                image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop",
+                description: "Rutas de alta montaña para expertos",
+                rating: 4.8,
+                price: "$$"
             }
         ]
     }
