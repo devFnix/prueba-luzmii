@@ -153,13 +153,14 @@ function loadOutingDetail() {
                     <img src="${outing.image}" alt="${outing.name}" loading="lazy">
                 </div>
                 <div class="outing-info-large">
-                    <h3>🍽️ ${outing.name}</h3>
+                    <h2>Bienvenidos a la salida de ${outing.name}</h2>
                     <p><strong>📅 Fecha:</strong> ${outing.date}</p>
                     <p><strong>⏰ Hora:</strong> ${outing.time}</p>
                     <p><strong>📍 Lugar:</strong> ${outing.location}</p>
                     <p><strong>📝 Descripción:</strong> ${outing.description}</p>
                     <p><strong>👥 Asistentes:</strong> ${outing.attendants.join(', ')}</p>
                     <a href="index.html" class="back-button">Volver a la lista</a>
+                    <a href="index.html" class="back-button">Revisar mapa</a>
                 </div>
             </div>
             
