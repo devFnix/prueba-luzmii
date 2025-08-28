@@ -122,7 +122,7 @@ function loadOutingsList() {
             <div class="outing-info">
                 <h2>🍽️ ${outing.name}</h2>
                 <p><strong>📅 Fecha:</strong> ${outing.date}</p>
-                <p><strong>⏰ Hora:</strong> ${outing.time}</p>
+                <p><strong>⏰ Hora2:</strong> ${outing.time}</p>
                 <p><strong>📍 Lugar:</strong> ${outing.location}</p>
                 <p><strong>📝 Descripción:</strong> ${outing.description.substring(0, 100)}...</p>
                 <a href="detail.html?id=${outing.id}">🔍 Ver Detalles</a>
